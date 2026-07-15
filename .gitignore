@@ -1,0 +1,62 @@
+# Temporary files
+*.tmp
+*.bak
+*.log
+*.swp
+*~
+
+# PowerShell cache
+*.psc
+*.psxml
+*.pshistory
+# PowerShell ISE / console history
+$profile.history
+ConsoleHost_history.txt
+
+# VS Code
+.vscode/.cache
+.vscode/*.log
+.vscode/extensions.json
+.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.vscode/**/.DS_Store
+
+# Windows files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# PSModule files
+bin/
+out/
+publish/
+dist/
+Release/
+Debug/
+
+# NuGet / PSGallery packaging
+*.nupkg
+
+# Pester test outputs
+TestResults/
+*.coverage.xml
+coverage/
+
+# secrets and local configurations
+*.env
+*.local.ps1
+secrets.ps1
+credentials.xml
+
+# Dependency folder
+modules/
+.depend/
+
+# Logs
+error.log
+output.log
+
+# Notepad temp files
+*.txt~
