@@ -26,7 +26,6 @@ function Confirm-Action {
                 return $true
             }
             else {
-                Write-Host "Operation cancelled"
                 return $false
             }
         }
