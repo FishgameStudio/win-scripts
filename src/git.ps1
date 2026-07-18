@@ -104,12 +104,7 @@ function Get-AllCommits {
 
 ##### GIT ADD #####
 function Add-File {
-    [CmdletBinding()]
-    param(
-        [Parameter(Mandatory)]
-        [string]$File
-    )
-    gnp add $File
+    gnp add $args
 }
 
 ##### GIT STATUS #####
