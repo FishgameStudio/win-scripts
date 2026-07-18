@@ -109,7 +109,7 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 
-* PowerShell
+* PowerShell 7+
 
 ### 📦 Installation
 
@@ -126,7 +126,10 @@ git clone https://github.com/FishgameStudio/win-scripts.git
 ## 💡 Usage
 
 ```powershell
-# PowerShell scripts
+# Enable access to execute scripts
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Run
+. src/main.ps1
 ```
 
 _For more examples, please refer to the [Documentation](docs) or [Examples](examples)_
