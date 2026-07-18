@@ -18,17 +18,17 @@ Set-Alias grep findstr
 # $env:QT_ENABLE_HIGHDPI_SCALING = "1"
 
 ##### WELCOME #####
-Write-Output "WELCOME BACK, " -ForegroundColor Yellow -NoNewline
-Write-Output "YOURNAME" -ForegroundColor Blue -NoNewline
-Write-Output "!" -ForegroundColor Yellow
-Write-Output ""
+Write-Host "WELCOME BACK, " -ForegroundColor Yellow -NoNewline
+Write-Host "YOURNAME" -ForegroundColor Blue -NoNewline
+Write-Host "!" -ForegroundColor Yellow
+Write-Host ""
 
 ##### GIT STATUS #####
 function Write-GitStatus {
     [bool]$isUptodate = [string]::IsNullOrEmpty("$(git status | Select-String "Your branch is up to date with")")
     [string]$currBranch = git rev-parse --abbrev-ref HEAD
-    Write-Output "Current Branch: $currBranch $($isUptodate ? '(up to date)' : '(not up to date)')" -ForegroundColor Yellow
-    Write-Output "File status: "
+    Write-Host "Current Branch: $currBranch $($isUptodate ? '(up to date)' : '(not up to date)')" -ForegroundColor Yellow
+    Write-Host "File status: "
     git status --porcelain
 }
 Write-GitStatus
