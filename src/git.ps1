@@ -1,5 +1,5 @@
 # Several git commands.
-Import-Module ./file.ps1
+Import-Module "$PSScriptRoot/file.ps1"
 
 
 # Aliases for typo
