@@ -213,10 +213,10 @@ Set-Alias ci New-Commit
 Set-Alias ciamend New-AmendedCommit
 Set-Alias log Get-AllCommits
 Set-Alias gstat Write-GitStatus
-Set-Alias gmerge Merge-Branch
-Set-Alias gmergeNoff Merge-BranchNoFF
-Set-Alias gpush Push-Branch
-Set-Alias gpull Receive-Pull
+Set-Alias merge Merge-Branch
+Set-Alias mergeNoff Merge-BranchNoFF
+Set-Alias push Push-Branch
+Set-Alias pull Receive-Pull
 Set-Alias gdiff Get-Difference
 Set-Alias ga Add-File
 Set-Alias rkadded Revoke-Added
