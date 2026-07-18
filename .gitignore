@@ -16,8 +16,8 @@ ConsoleHost_history.txt
 # VS Code
 .vscode/.cache
 .vscode/*.log
-.vscode/extensions.json
-.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
