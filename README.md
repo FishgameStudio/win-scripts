@@ -31,7 +31,6 @@
 ![Issues](https://img.shields.io/github/issues/FishgameStudio/win-scripts)
 ![PRs](https://img.shields.io/github/issues-pr/FishgameStudio/win-scripts)
 [![CommitCount](https://badgen.net/github/commits/FishgameStudio/win-scripts/main)](https://github.com/FishgameStudio/win-scripts/commits/main)
-[![PyPI](https://img.shields.io/pypi/v/term2gif?style=color=orange)](https://pypi.com/project/term2gif)
 ![Size](https://img.shields.io/github/repo-size/FishgameStudio/win-scripts)
 ![Welcome](https://img.shields.io/badge/PRs%20%26%20Issues-welcome-bluevoilet)
 [![License](https://img.shields.io/github/license/FishgameStudio/win-scripts)](LICENSE)
