@@ -1,5 +1,5 @@
 # Several git commands.
-Import-Module "$PSScriptRoot/file.ps1"
+Import-Module "$PSScriptRoot/files.ps1"
 
 
 # Aliases for typo
@@ -104,7 +104,7 @@ function Get-AllCommits {
 
 ##### GIT ADD #####
 function Add-File {
-    gnp add $args
+    gnp add @args
 }
 
 ##### GIT STATUS #####
