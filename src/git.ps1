@@ -198,6 +198,8 @@ function Initialize-Remote {
     )
     gnp remote add origin $URL
 }
+function todev { Set-CurrentBranch dev }
+function tomain { Set-CurrentBranch main }
 
 ##### ALIASES #####
 
@@ -206,6 +208,7 @@ Set-Alias ginitWith Initialize-GitRepoWith
 Set-Alias isGitRepo Test-IsGitRepo
 Set-Alias currBranch Get-CurrentBranch
 Set-Alias switchBranch Set-CurrentBranch  
+Set-Alias checkout Set-CurrentBranch
 Set-Alias delBranch Remove-Branch
 Set-Alias allBranches Get-AllBranches
 Set-Alias isuptodate Test-UpToDate
