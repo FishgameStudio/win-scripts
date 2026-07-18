@@ -184,6 +184,21 @@ function Get-Difference {
     gnp diff $Old $New
 }
 
+##### MISC #####
+function Revoke-Added {
+    # Revoke all added files.
+    gnp reset
+    Write-Output "All added files have been revoked"
+}
+function Initialize-Remote {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]
+        [string]$URL
+    )
+    gnp remote add origin $URL
+}
+
 ##### ALIASES #####
 
 Set-Alias ginit Initialize-GitRepo
@@ -204,3 +219,5 @@ Set-Alias gpush Push-Branch
 Set-Alias gpull Receive-Pull
 Set-Alias gdiff Get-Difference
 Set-Alias ga Add-File
+Set-Alias rkadded Revoke-Added
+Set-Alias initRemote Initialize-Remote
