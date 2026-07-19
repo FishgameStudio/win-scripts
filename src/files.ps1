@@ -236,3 +236,4 @@ Set-Alias rmdirforce Remove-DirFull
 Set-Alias ls Get-Files
 Set-Alias ll Get-FilesVerbose
 Set-Alias lsattr Get-FileAttributes
+Set-Alias du Get-Size

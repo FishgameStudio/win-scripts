@@ -36,3 +36,5 @@ function Confirm-Action {
     } while ($true)
 }
 
+##### ALIASES #####
+Set-Alias rusure Confirm-Action
