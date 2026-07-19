@@ -25,7 +25,8 @@ Write-Host ""
 
 ##### GIT STATUS #####
 function Write-GitStatus {
-    $currBranch = git rev-parse --abbrev-ref HEAD
+    if (-not (Test-Path ."git")) { return }
+     $currBranch = git rev-parse --abbrev-ref HEAD
     $isUpToDate = [string]::IsNullOrEmpty("$(git status | Select-String 'Your branch is up to date with')")
     $uptodatePrompt = $isUpToDate ? "(up to date with remote)" : "(not up to date with remote)"
     Write-Output "Current Branch: $currBranch $uptodatePrompt"
