@@ -117,8 +117,35 @@ function Write-GitStatus {
     $isUpToDate = Test-UpToDate
     $uptodatePrompt = $isUpToDate ? "(up to date with remote)" : "(not up to date with remote)"
     Write-Output "Current Branch: $currBranch $uptodatePrompt"
-    Write-Output "File status: "
-    git status --porcelain
+    $res = git status --porcelain
+    if ([string]::IsNullOrWhiteSpace($res)) {
+        Write-Host "Nothing to commit, working tree clean"
+    } else {
+        Write-Host "File status: "
+        [string[]]$list = $res
+        foreach ($line in $list) {
+            $line = $line.Trim()
+            if ($line.StartsWith("M")) {
+                Write-Host $line -ForegroundColor Yellow
+            } elseif ($line.StartsWith("A")) {
+                Write-Host $line -ForegroundColor DarkGreen
+            } elseif ($line.StartsWith("D")) {
+                Write-Host $line -ForegroundColor DarkRed
+            } elseif ($line.StartsWith("R")) {
+                Write-Host $line -ForegroundColor Green
+            } elseif ($line.StartsWith("C")) {
+                Write-Host $line -ForegroundColor Green
+            } elseif ($line.StartsWith("M")) {
+                Write-Host $line -ForegroundColor Yellow
+            } elseif ($line.StartsWith("UU")) {
+                Write-Host $line -ForegroundColor Red
+            } elseif ($line.StartsWith("U")) {
+                Write-Host $line -ForegroundColor Green
+            } else {
+                Write-Host $line -ForegroundColor White
+            }
+        }
+    }
 }
 
 ##### GIT MERGE #####
