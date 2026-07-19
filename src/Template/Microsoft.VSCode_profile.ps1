@@ -25,8 +25,8 @@ Write-Host ""
 
 ##### GIT STATUS #####
 function Write-GitStatus {
-    $currBranch = Get-CurrentBranch
-    $isUpToDate = Test-UpToDate
+    $currBranch = gnp rev-parse --abbrev-ref HEAD
+    $isUpToDate = [string]::IsNullOrEmpty("$(gnp status | Select-String 'Your branch is up to date with')")
     $uptodatePrompt = $isUpToDate ? "(up to date with remote)" : "(not up to date with remote)"
     Write-Output "Current Branch: $currBranch $uptodatePrompt"
     $res = git status --porcelain
@@ -61,3 +61,6 @@ function Write-GitStatus {
 }
 
 Write-GitStatus
+
+# Certainly you can execute main.ps1 to get the functions, like:
+# . D:/path/to/win-scripts/src/main.ps1
